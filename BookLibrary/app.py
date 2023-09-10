@@ -2,7 +2,7 @@ from flask import Flask, render_template, request,session,redirect
 from database import *
 
 app = Flask(__name__)
-
+app.secret_key = 'your_secret_key'
 init_db()
 
 # Define admin username and password
