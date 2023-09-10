@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for the Login Page */
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+
+        .container {
+            max-width: 400px; /* Limit the container width for a centered login form */
+            margin-top: 100px; /* Adjust the margin from the top */
+        }
+
+        .card {
+            border: none; /* Remove card border */
+            border-radius: 15px; /* Add rounded corners to the card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        .card-header {
+            background-color: #007BFF; /* Blue header background color */
+            color: #fff; /* White text color */
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px; /* Add spacing between form elements */
+        }
+
+        .btn-primary {
+            background-color: #007BFF; /* Blue button background color */
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .alert-danger {
+            color: #721c24; /* Dark red text color for error messages */
+            background-color: #f8d7da; /* Light red background for error messages */
+            border: 1px solid #f5c6cb; /* Red border for error messages */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Library Management System</h3>
+
+            </div>
+            <div class="card-body">
+                <form action="/authenticate" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+                {% if message %}
+                    <div class="alert alert-danger mt-3">{{ message }}</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

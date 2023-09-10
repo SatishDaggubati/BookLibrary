@@ -1,0 +1,7 @@
+.nav-item.ml-auto .nav-link {
+    background-color: #FF5733;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px; /* Add some space to the right of the button */
+}
